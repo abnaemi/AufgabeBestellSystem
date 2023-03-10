@@ -53,7 +53,7 @@ public class Main {
  }}
 
 while (true) {
-    System.out.println("Now you can watch your orders, press 0 for your first order and 1 for your second. If none available, it will exit");
+    System.out.println("Now you can watch your orders, press 0 for your first order and 1 for your second.");
     try {
         int orderNumber = scanner.nextInt();
         System.out.println(shop.getOrder(orderNumber));
@@ -61,7 +61,7 @@ while (true) {
         System.out.println("Order number invalid");
     }
 
-    System.out.println("Want to see all orders? (yes)");
+    System.out.println("Want to see all orders? (yes,no for exit)");
     Scanner scanner2 = new Scanner(System.in);
     String allOrdersInput = scanner2.nextLine();
     if (allOrdersInput.equals("yes")) {
