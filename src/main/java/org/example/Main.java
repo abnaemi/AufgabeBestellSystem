@@ -44,7 +44,7 @@ public class Main {
         System.out.println("Now you can watch your orders, press 0 for your first order and 1 for your second. If none available, it will exit");
         try {
             int orderNumber = scanner.nextInt();
-            shop.getOrder(orderNumber);
+            System.out.println(shop.getOrder(orderNumber));
         } catch (Exception e) {
             System.out.println("Order number invalid");
         }
