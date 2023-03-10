@@ -5,13 +5,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepo {
+    private List<Product> productList;
 
-    String[] products= {"Notebook", "Camera", "Smartphone"};
-
-    public String[] getProducts() {
-        return products;
+    public ProductRepo() {
+        productList = new ArrayList<Product>();
     }
-    public String listProducts(int x){
-        return products[x];
+
+    public void add(Product product) {
+        productList.add(product);
+    }
+
+    public Product get(int index) {
+        return productList.get(index);
+    }
+
+    public List<Product> list() {
+        return productList;
     }
 }
