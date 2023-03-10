@@ -45,12 +45,14 @@ public class Main {
             Product productone = new Product(orderIDoptionTwo, orderOptionTwo);
             System.out.println("Order created: " + productone);
             if (shop.listProducts().contains(productone)){
-                System.out.println("Product exists");} else {
+                System.out.println("Product exists");
+                Order orderOne = new Order(1, productone);
+                shop.addOrder(orderOne);
+                System.out.println("Order created");
+            } else {
                 System.out.println("Invalid Product name or id");
             }
-            Order orderOne = new Order(1, productone);
-            shop.addOrder(orderOne);
-            System.out.println("Order created");
+
 
         }} catch (Exception e){
      System.out.println("Wrong input, start again");
