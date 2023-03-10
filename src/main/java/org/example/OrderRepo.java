@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderRepo {
-    private List<Order> orders;
+    protected List<Order> orders;
 
     public OrderRepo() {
         orders = new ArrayList<>();
