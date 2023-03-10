@@ -32,10 +32,7 @@ class ShopServiceTest {
         Product product2 = new Product(2,"Notebook");
         Product product3 = new Product(3,"Camera");
 
-        ProductRepo productRepo = new ProductRepo();
-        productRepo.add(product);
-        productRepo.add(product2);
-        productRepo.add(product3);
+
 
         int id =2;
         Product expected = product3 = new Product(3,"Camera");
