@@ -53,7 +53,7 @@ public class Main {
  }}
 
 while (true) {
-    System.out.println("Now you can view your oders. First order equals 0. You can leave the programm in the next step");
+    System.out.println("Now you can view your oders. Input a number. First order equals 0. You can leave the programm in the next step");
     try {
         int orderNumber = scanner.nextInt();
         System.out.println(shop.getOrder(orderNumber));
