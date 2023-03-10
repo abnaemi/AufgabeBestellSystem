@@ -30,7 +30,7 @@ public class Main {
         if (orderOption.equals("yes")) {
             System.out.println("What do you want to order? Type first the ID");
             int orderIDoptionTwo = scanner.nextInt();
-            scanner.nextLine(); // Consume the remaining newline character
+            scanner.nextLine();
             System.out.println("Now type the product");
             String orderOptionTwo = scanner.nextLine();
             Product productone = new Product(orderIDoptionTwo, orderOptionTwo);
@@ -44,7 +44,7 @@ public class Main {
         System.out.println("Now you can watch your orders, press 0 for your first order and 1 for your second. If none available, it will exit");
         try {
             int orderNumber = scanner.nextInt();
-            scanner.nextLine(); // Consume the remaining newline character
+            scanner.nextLine();
             shop.getOrder(orderNumber);
         } catch (Exception e) {
             System.out.println("Order number invalid");
@@ -54,7 +54,8 @@ public class Main {
         String allOrders = scanner.nextLine();
         if (allOrders.equals("yes")) {
             shop.listOrders();
-        }
+        } else {break;}
+
     }}}
 
 
