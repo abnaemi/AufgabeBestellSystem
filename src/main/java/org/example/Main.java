@@ -35,6 +35,11 @@ public class Main {
             String orderOptionTwo = scanner.nextLine();
             Product productone = new Product(orderIDoptionTwo, orderOptionTwo);
             System.out.println("Order created: " + productone);
+            if (shop.listProducts().contains(productone)){
+                System.out.println("Product exists");} else {
+                System.out.println("Invalid Product name or id");
+                break;
+            }
             Order orderOne = new Order(1, productone);
             shop.addOrder(orderOne);
             System.out.println("Order created");
