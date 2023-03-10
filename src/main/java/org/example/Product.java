@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public class Product {
 
 
@@ -18,6 +20,18 @@ public class Product {
                 "id=" + id +
                 ", product='" + product + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Product product1)) return false;
+        return id == product1.id && Objects.equals(product, product1.product);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, product);
     }
 }
 

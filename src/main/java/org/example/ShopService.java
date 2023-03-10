@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ShopService {
 
@@ -36,5 +37,25 @@ public class ShopService {
 
     public List<Order> listOrders() {
         return orderRepo.list();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ShopService that)) return false;
+        return Objects.equals(productRepo, that.productRepo) && Objects.equals(orderRepo, that.orderRepo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productRepo, orderRepo);
+    }
+
+    @Override
+    public String toString() {
+        return "ShopService{" +
+                "productRepo=" + productRepo +
+                ", orderRepo=" + orderRepo +
+                '}';
     }
 }
