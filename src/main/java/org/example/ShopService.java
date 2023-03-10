@@ -1,5 +1,10 @@
 package org.example;
 
+import Objekte.Order;
+import Objekte.Product;
+import Repos.OrderRepo;
+import Repos.ProductRepo;
+
 import java.util.List;
 import java.util.Objects;
 

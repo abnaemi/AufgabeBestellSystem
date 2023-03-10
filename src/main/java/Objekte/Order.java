@@ -1,5 +1,5 @@
-package org.example;
-import java.util.List;
+package Objekte;
+
 import java.util.Objects;
 
 public class Order {

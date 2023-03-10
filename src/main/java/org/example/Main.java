@@ -1,5 +1,8 @@
 package org.example;
 
+import Objekte.Order;
+import Objekte.Product;
+
 import java.util.Scanner;
 
 public class Main {
