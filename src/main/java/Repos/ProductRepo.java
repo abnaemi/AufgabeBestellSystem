@@ -1,6 +1,6 @@
 package Repos;
 
-import Objekte.Product;
+import Models.Product;
 
 import java.util.ArrayList;
 import java.util.List;

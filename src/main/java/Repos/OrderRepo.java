@@ -1,6 +1,6 @@
 package Repos;
 
-import Objekte.Order;
+import Models.Order;
 
 import java.util.ArrayList;
 import java.util.List;

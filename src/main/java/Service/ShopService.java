@@ -1,7 +1,7 @@
-package org.example;
+package Service;
 
-import Objekte.Order;
-import Objekte.Product;
+import Models.Order;
+import Models.Product;
 import Repos.OrderRepo;
 import Repos.ProductRepo;
 

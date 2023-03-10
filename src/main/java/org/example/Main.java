@@ -1,7 +1,8 @@
 package org.example;
 
-import Objekte.Order;
-import Objekte.Product;
+import Models.Order;
+import Models.Product;
+import Service.ShopService;
 
 import java.util.Scanner;
 
