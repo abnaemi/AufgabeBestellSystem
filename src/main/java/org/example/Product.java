@@ -3,8 +3,8 @@ package org.example;
 public class Product {
 
 
-    int id;
-    String product;
+    protected int id;
+  protected   String product;
 
     public Product ( int id, String product) {
 
@@ -12,7 +12,13 @@ public class Product {
         this.product = product;
     }
 
-
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", product='" + product + '\'' +
+                '}';
+    }
 }
 
 

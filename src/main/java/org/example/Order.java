@@ -2,11 +2,22 @@ package org.example;
 import java.util.List;
 
 public class Order {
-    int id;
-    List<Product> products;
+   protected int id;
+   //protected List<Product> products;
+    protected Product products;
 
-    public Order(int id, List<Product> products) {
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", products=" + products +
+                '}';
+    }
+
+    public Order(int id, Product products) {
         this.id = id;
         this.products = products;
+
+
     }
 }

@@ -4,16 +4,16 @@ import java.util.List;
 
 public class ShopService {
 
-    private ProductRepo productRepo;
-    private OrderRepo orderRepo;
+    protected ProductRepo productRepo;
+    protected OrderRepo orderRepo;
 
     public ShopService() {
         productRepo = new ProductRepo();
         orderRepo = new OrderRepo();
-        // Add some default products to the repo
         productRepo.add(new Product(1, "Smartphone"));
         productRepo.add(new Product(2, "Notebook"));
         productRepo.add(new Product(3, "Camera"));
+
     }
 
 
