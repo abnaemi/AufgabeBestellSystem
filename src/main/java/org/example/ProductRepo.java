@@ -1,19 +1,17 @@
 package org.example;
 
-public enum ProductRepo {
-    Smartphones(1),
-    Cameras(2),
-    Notebooks(3);
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
 
-    private int productID;
+public class ProductRepo {
 
-    ProductRepo(int productID) {
-        this.productID = productID;
+    String[] products= {"Notebook", "Camera", "Smartphone"};
+
+    public String[] getProducts() {
+        return products;
     }
-
-    public int getProductID (){
-        return productID;
+    public String listProducts(int x){
+        return products[x];
     }
-
-
 }
