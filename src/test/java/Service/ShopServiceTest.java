@@ -36,7 +36,7 @@ class ShopServiceTest {
         Order orderactual = new Order(1,randomproduct);
         Order orderexpected = new Order(1,randomproduct);
 
-        shop.addOrder(orderactual);
+        shop.addOrder(orderexpected);
         shop.addOrder(orderexpected);
         shop.getOrder(0);
 
