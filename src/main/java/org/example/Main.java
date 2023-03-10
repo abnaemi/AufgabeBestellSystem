@@ -23,10 +23,15 @@ public class Main {
                 break;
             } else {
                 System.out.println("Wrong input, try again.");
-            }
- try {
+            } }
+
+
+
+        while (true){ try  {
         System.out.println("Do you want to give an order?");
         String orderOption = scanner.nextLine();
+            if (orderOption.equals("no")){
+                break;}
         if (orderOption.equals("yes")) {
             System.out.println("What do you want to order? Type first the ID");
             int orderIDoptionTwo = scanner.nextInt();
@@ -38,29 +43,36 @@ public class Main {
             if (shop.listProducts().contains(productone)){
                 System.out.println("Product exists");} else {
                 System.out.println("Invalid Product name or id");
-                break;
             }
             Order orderOne = new Order(1, productone);
             shop.addOrder(orderOne);
             System.out.println("Order created");
+
         }} catch (Exception e){
      System.out.println("Wrong input, start again");
- }
-        System.out.println("Now you can watch your orders, press 0 for your first order and 1 for your second. If none available, it will exit");
-        try {
-            int orderNumber = scanner.nextInt();
-            System.out.println(shop.getOrder(orderNumber));
-        } catch (Exception e) {
-            System.out.println("Order number invalid");
-        }
+ }}
 
-        System.out.println("Want to see all orders?");
-        String allOrders = scanner.nextLine();
-        if (allOrders.equals("yes")) {
-            System.out.println(shop.listOrders());
-        }
+while (true) {
+    System.out.println("Now you can watch your orders, press 0 for your first order and 1 for your second. If none available, it will exit");
+    try {
+        int orderNumber = scanner.nextInt();
+        System.out.println(shop.getOrder(orderNumber));
+    } catch (Exception e) {
+        System.out.println("Order number invalid");
+    }
 
-    }}}
+    System.out.println("Want to see all orders? (yes)");
+    Scanner scanner2 = new Scanner(System.in);
+    String allOrdersInput = scanner2.nextLine();
+    if (allOrdersInput.equals("yes")) {
+        System.out.println(shop.listOrders());
+    } else {
+        break;
+    }
+}
+}
+
+    }
 
 
 
